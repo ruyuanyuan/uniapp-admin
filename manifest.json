@@ -184,7 +184,8 @@
                     "changeOrigin" : true,
                     "secure" : false
                 }
-            }
+            },
+            "https" : false
         },
         "title" : "uniapp-admin",
         "router" : {

@@ -1,6 +1,10 @@
 <template>
 	<view>
+		<view class="">
+			我测试一下
+		</view>
 		<web-view :src="allUrl"></web-view>
+		<!-- <iframe :src="allUrl"></iframe> -->
 	</view>
 </template>
 
@@ -9,8 +13,8 @@
 	export default {
 		data() {
 			return {
-				// viewerUrl: '/hybrid/html/web/viewer.html',
-				viewerUrl: globalConfig.baseUrl + '/pdf/web/viewer.html',
+				viewerUrl: '/hybrid/html/web/viewer.html',
+				// viewerUrl: globalConfig.baseUrl + '/pdf/web/viewer.html',
 				allUrl: ''
 			}
 		},
@@ -24,9 +28,9 @@
 			// #endif
 		},
 		onLoad(options) {
-			let fileUrl = encodeURIComponent(
-				globalConfig.baseUrl + '/api/attachment?name=' + options.name + '&url=' + options.url)
-			this.allUrl = this.viewerUrl + '?file=' + fileUrl
+			// let fileUrl = encodeURIComponent(
+			// 	globalConfig.baseUrl + '/api/attachment?name=' + options.name + '&url=' + options.url)
+			this.allUrl = this.viewerUrl + '?file=' + 'https://tems.minecraft.education.jdcloud.com/2019/08/10/Block%20coding%20docs/Unit%201/Lesson%201/Educator%20Guide_Unit1_Lesson1_Chinese%20Beta17.pdf'
 		}
 	}
 </script>
